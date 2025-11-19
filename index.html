@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es">
+<head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">   
+    <script src="https://kit.fontawesome.com/9de8e1aed1.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio - Mi Portafolio</title>
+
+  <!-- Fuente Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Iconos FontAwesome -->
+  <script src="https://kit.fontawesome.com/9de8e1aed1.js" crossorigin="anonymous"></script>
+
+  <style>
+.cv-button {
+    display: inline-block;
+    margin-top: 25px;
+    background-color: #0a4cff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.cv-button:hover {
+    background-color: #0034c9;
+}
+
+  /* ===== RESET ===== */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+      background-color: #000000;
+      color: #e5e5e5;
+  }
+
+  /* ===== NAVBAR ===== */
+  header {
+      width: 100%;
+      background-color: #050505;
+      box-shadow: 0 0 10px #0a4cff40;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+  }
+
+  #navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+  }
+
+  .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+  }
+
+  .logo span {
+      color: #0a4cff;
+  }
+
+  .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+  }
+
+  .nav-links li a {
+      text-decoration: none;
+      color: #e5e5e5;
+      font-size: 1rem;
+      text-transform: capitalize;
+      transition: .3s;
+  }
+
+  .nav-links li a:hover {
+      color: #0a4cff;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 120px;
+      padding-left: 60px;
+      padding-right: 60px;
+  }
+
+  .hero-content {
+      max-width: 900px;
+  }
+
+  .hero-text h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: white;
+  }
+
+  .hero-text h2 {
+      font-size: 1.8rem;
+      margin-top: 10px;
+      color: #0a4cff;
+  }
+
+  .hero-text p {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      width: 80%;
+  }
+
+  .hero-image img {
+      margin-top: 20px;
+      width: 200px;
+      border-radius: 20px;
+      border: 3px solid #0a4cff;
+  }
+
+  /* ===== REDES ===== */
+  .social-links {
+      margin-top: 25px;
+      display: flex;
+      gap: 15px;
+  }
+
+  .social-links a {
+      font-size: 1.5rem;
+      color: white;
+      padding: 10px;
+      border: 2px solid #0a4cff;
+      border-radius: 10px;
+      transition: .3s;
+  }
+
+  .social-links a:hover {
+      background-color: #0a4cff;
+  }
+
+  /* ===== SECCIONES ===== */
+  section {
+      padding: 80px 60px;
+  }
+
+  section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #0a4cff;
+      text-transform: capitalize;
+  }
+
+  /* ===== EXPERIENCIA ===== */
+  .timeline {
+      margin-top: 20px;
+      border-left: 3px solid #0a4cff;
+      padding-left: 25px;
+  }
+
+  .timeline-item {
+      margin-bottom: 40px;
+  }
+
+  .timeline-content .date {
+      font-weight: 600;
+      color: #0a4cff;
+  }
+
+  .skills {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+  }
+
+  .skills li {
+      padding: 6px 12px;
+      background: #0a4cff33;
+      border: 1px solid #0a4cff;
+      border-radius: 8px;
+  }
+
+  /* ===== PROYECTOS ===== */
+  .proyects-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+  }
+
+  .proyect-card {
+      width: 300px;
+      background: #111;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid #0a4cff;
+      box-shadow: 0 0 15px #0a4cff40;
+  }
+
+  .proyect-img img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+  }
+
+  .proyect-info {
+      padding: 20px;
+  }
+
+  .proyect-tech span {
+      background: #0a4cff33;
+      border: 1px solid #0a4cff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-right: 5px;
+  }
+  </style>
+</head>
+
+<body>
+
+<header>
+    <nav id="navbar">
+        <div class="logo">Mi<span>portafolio</span></div>
+        <ul class="nav-links">
+            <li><a href="#inicio">inicio</a></li>
+            <li><a href="#curriculum">Curriculum</a></li>
+            <li><a href="#experiencia">experiencia</a></li>
+            <li><a href="#proyectos">proyectos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Marcos Alfonseca</h1>
+                <a class="cv-button" href="CV_Marcos_Alfonseca.pdf" target="_blank">Ver mi Currículum</a>
+                <h2>Ing. Sistemas</h2>
+                <p>Soy estudiante de Ingeniería en Sistemas en la Universidad O&M, con un marcado interés por la tecnología, las redes y el desarrollo de aplicaciones. Me apasiona comprender cómo funcionan los sistemas desde su estructura interna hasta su interacción con el usuario final.
+
+Me motiva crear soluciones innovadoras que optimicen procesos, fortalezcan la productividad y ofrezcan experiencias más intuitivas. Disfruto trabajar en proyectos donde puedo combinar creatividad y análisis técnico, siempre buscando aprender nuevas herramientas, metodologías y buenas prácticas del sector.
+
+Mi objetivo profesional es convertirme en un desarrollador y especialista en tecnología capaz de aportar valor real a las organizaciones, impulsando soluciones eficientes, seguras y orientadas al futuro.</p>
+                <h3>Contacto: +1 829-742-7448</h3>
+                <h4>Correo: marcosantonio457000@gmail.com</h4>
+                <h5>Matricula: 23-SISN-2-013</h5>
+                <div class="hero-image">
+                    <img src="profile2.jpeg.jpg" alt="Imagen de perfil">
+                </div>
+            </div>
+
+            <div class="social-links">
+    <a href="https://www.instagram.com/marcos_alfonseca/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://x.com/MarcosAnto80" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <a href="https://es.pinterest.com/marcosantonio457000/" target="_blank">
+        <i class="fa-brands fa-pinterest"></i>
+    </a>
+
+    <a href="https://web.facebook.com/marcosantonio.alfonsecaguerrero" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+
+    <a href="https://github.com/marcosantonio457000-design" target="_blank">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+
+        </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia">
+        <h2>Experiencia laboral</h2>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="date">2025 - Actualidad</span>
+                    <h3>Auxiliar</h3>
+                    <h4>Junta Central Electoral</h4>
+                    <p>Representante y suplente del encargado del archivo de la provincia La Romana y soporte técnico de los equipos.</p>
+
+                    <ul class="skills">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Servicio al cliente</li>
+                        <li>Capacitación ante alertas</li>
+                        <li>Soporte técnico</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="proyects">
+       <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="projects-container">
+                <div class="projects-grid">
+                   
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="cyberconnect.png" alt="Blog Cyberconnect" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div style="display: none; width: 100%; height: 100%; background: linear-gradient(135deg, var(--dark-blue), var(--pink-pastel)); color: white; display: flex; align-items: center; justify-content: center;">
+                                Blog Cyberconnect
+                            </div>
+                            <div class="project-overlay">
+                                <a href="https://sites.google.com/view/cyberconnect-/la-infraestructura-invisible-lo-que-hace-posible-todo" class="btn" target="_blank">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Cyberconnect</h3>
+                            <p>Cyberconnect es un blog dinámico y divertido inspirado para un público joven que busca obtener mas conocimientos sobre la tecnología y servicios de Internet. Toca temas interesantes como la infraestructura invisible: que lo hace todo posible, la nueva generación de conectividad, las plataformas y modelos de servicios de Internet, que dominan el mundo, también no se habla de la interface del futuro, y como interactuaremos con ellas.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Blog</span>
+                                <span class="project-tag">Tecnología</span>
+                                <span class="project-tag">Educación</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-pink" onclick="openModal('modal1')">Ver Detalles</button>
+                                <a href="https://sites.google.com/view/cyberconnect-/la-infraestructura-invisible-lo-que-hace-posible-todo" class="btn" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="curriculum">
+    <h2>Currículum</h2>
+    <p>Puedes descargar o visualizar mi Currículum aquí:</p>
+
+    <a class="cv-button" href="CV_Marcos_Alfonseca.pdf" target="_blank">Descargar CV</a>
+</section>
+
+</main>
+
+</body>
+</html>
